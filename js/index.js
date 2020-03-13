@@ -48,3 +48,15 @@ navLinks[2].textContent = siteContent["nav"]["nav-item-3"];
 navLinks[3].textContent = siteContent["nav"]["nav-item-4"];
 navLinks[4].textContent = siteContent["nav"]["nav-item-5"];
 navLinks[5].textContent = siteContent["nav"]["nav-item-6"];
+
+let headerText = document.querySelector(".cta-text h1");
+headerText.textContent = siteContent["cta"]["h1"];
+headerText.style.width = "40%";
+headerText.style.marginLeft = "10%";
+headerText.style.fontFamily = "Bangers";
+
+let button = document.querySelector(".cta-text button");
+button.textContent = siteContent["cta"]["button"];
+
+let headerImg = document.getElementById("cta-img");
+headerImg.setAttribute("src", siteContent["cta"]["img-src"]);
