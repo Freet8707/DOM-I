@@ -49,6 +49,19 @@ navLinks[3].textContent = siteContent["nav"]["nav-item-4"];
 navLinks[4].textContent = siteContent["nav"]["nav-item-5"];
 navLinks[5].textContent = siteContent["nav"]["nav-item-6"];
 
+let prependNav = document.createElement("a");
+prependNav.textContent = "Science";
+let navBar = document.querySelector("nav");
+navBar.prepend(prependNav);
+let appendNav = document.createElement("a");
+appendNav.textContent = "Rocks";
+navBar.appendChild(appendNav);
+
+let navLinkColor = document.querySelectorAll("nav a");
+navLinkColor.forEach(element => {
+  element.style.color = "green";
+});
+
 let headerH1 = document.querySelector(".cta-text h1");
 headerH1.textContent = siteContent["cta"]["h1"];
 // headerH1.style.fontFamily = "Bangers";
