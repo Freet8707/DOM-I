@@ -88,3 +88,25 @@ H4Text[5].textContent = siteContent["contact"]["contact-h4"]
 PTags[5].textContent = siteContent["contact"]["address"]
 PTags[6].textContent = siteContent["contact"]["phone"]
 PTags[7].textContent = siteContent["contact"]["email"]
+
+//adding in the footer text
+PTags[8].textContent = siteContent["footer"]["copyright"]
+
+//beginning task 3, adding two new categories to top nav
+const resourcesLink = document.createElement("a")
+resourcesLink.textContent = "Resources"
+resourcesLink.setAttribute("href", "#")
+const meetUsLink = document.createElement("a")
+meetUsLink.textContent = "Meet Us"
+meetUsLink.setAttribute("href", "#")
+
+//selecting the parent element
+const navLinkParent = document.querySelector("nav")
+navLinkParent.prepend(resourcesLink)
+navLinkParent.appendChild(meetUsLink)
+
+const navLinkHTMLCol = document.getElementsByTagName("a")
+const navLinkHTMLColArr = Array.from(navLinkHTMLCol)
+navLinkHTMLColArr.forEach(el => {
+  el.style.color = "dodgerblue"
+}) 
