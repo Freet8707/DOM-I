@@ -40,3 +40,73 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let navLinks = document.querySelectorAll("a");
+// console.log(navLinks)
+navLinks[0].textContent = siteContent["nav"]["nav-item-1"];
+navLinks[1].textContent = siteContent["nav"]["nav-item-2"];
+navLinks[2].textContent = siteContent["nav"]["nav-item-3"];
+navLinks[3].textContent = siteContent["nav"]["nav-item-4"];
+navLinks[4].textContent = siteContent["nav"]["nav-item-5"];
+navLinks[5].textContent = siteContent["nav"]["nav-item-6"];
+
+//selecting header text 
+const firstHeader = document.querySelector("h1")
+firstHeader.textContent = siteContent["cta"]["h1"]
+
+//selecting button
+const headerButton = document.querySelector("button");
+headerButton.textContent = siteContent["cta"]["button"]
+
+//selecting header image
+const headerImage = document.getElementById("cta-img")
+headerImage.setAttribute('src', siteContent["cta"]["img-src"])
+
+//selecting all h4 and p tags
+const H4Text = document.querySelectorAll("h4")
+const PTags = document.querySelectorAll("p")
+
+H4Text[0].textContent = siteContent["main-content"]["features-h4"]
+H4Text[1].textContent = siteContent["main-content"]["about-h4"]
+H4Text[2].textContent = siteContent["main-content"]["services-h4"]
+H4Text[3].textContent = siteContent["main-content"]["product-h4"]
+H4Text[4].textContent = siteContent["main-content"]["vision-h4"]
+
+PTags[0].textContent = siteContent["main-content"]["features-content"]
+PTags[1].textContent = siteContent["main-content"]["about-content"]
+PTags[2].textContent = siteContent["main-content"]["services-content"]
+PTags[3].textContent = siteContent["main-content"]["product-content"]
+PTags[4].textContent = siteContent["main-content"]["vision-content"]
+
+//selecting the middle image
+const middleImage = document.querySelector(".middle-img")
+middleImage.setAttribute("src", siteContent["main-content"]["middle-img-src"])
+
+//adding in the contact header and text
+H4Text[5].textContent = siteContent["contact"]["contact-h4"]
+
+PTags[5].textContent = siteContent["contact"]["address"]
+PTags[6].textContent = siteContent["contact"]["phone"]
+PTags[7].textContent = siteContent["contact"]["email"]
+
+//adding in the footer text
+PTags[8].textContent = siteContent["footer"]["copyright"]
+
+//beginning task 3, adding two new categories to top nav
+const resourcesLink = document.createElement("a")
+resourcesLink.textContent = "Resources"
+resourcesLink.setAttribute("href", "#")
+const meetUsLink = document.createElement("a")
+meetUsLink.textContent = "Meet Us"
+meetUsLink.setAttribute("href", "#")
+
+//selecting the parent element
+const navLinkParent = document.querySelector("nav")
+navLinkParent.prepend(resourcesLink)
+navLinkParent.appendChild(meetUsLink)
+
+const navLinkHTMLCol = document.getElementsByTagName("a")
+const navLinkHTMLColArr = Array.from(navLinkHTMLCol)
+navLinkHTMLColArr.forEach(el => {
+  el.style.color = "dodgerblue"
+}) 
