@@ -50,5 +50,14 @@ navLinks[3].textContent = siteContent["nav"]["nav-item-4"];
 navLinks[4].textContent = siteContent["nav"]["nav-item-5"];
 navLinks[5].textContent = siteContent["nav"]["nav-item-6"];
 
+//selecting header text 
+const firstHeader = document.querySelector("h1")
+firstHeader.textContent = siteContent["cta"]["h1"]
 
-// console.log(navLinks[0])
+//selecting button
+const headerButton = document.querySelector("button");
+headerButton.textContent = siteContent["cta"]["button"]
+
+//selecting header image
+const headerImage = document.getElementById("cta-img")
+headerImage.setAttribute('src', siteContent["cta"]["img-src"])
