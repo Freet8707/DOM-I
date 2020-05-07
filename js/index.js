@@ -77,3 +77,7 @@ bodyPTags[1].textContent = siteContent["main-content"]["about-content"]
 bodyPTags[2].textContent = siteContent["main-content"]["services-content"]
 bodyPTags[3].textContent = siteContent["main-content"]["product-content"]
 bodyPTags[4].textContent = siteContent["main-content"]["vision-content"]
+
+//selecting the middle image
+const middleImage = document.querySelector(".middle-img")
+middleImage.setAttribute("src", siteContent["main-content"]["middle-img-src"])
