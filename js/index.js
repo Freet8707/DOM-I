@@ -63,21 +63,28 @@ const headerImage = document.getElementById("cta-img")
 headerImage.setAttribute('src', siteContent["cta"]["img-src"])
 
 //selecting all h4 and p tags
-const bodyH4Text = document.querySelectorAll("h4")
-const bodyPTags = document.querySelectorAll("p")
+const H4Text = document.querySelectorAll("h4")
+const PTags = document.querySelectorAll("p")
 
-bodyH4Text[0].textContent = siteContent["main-content"]["features-h4"]
-bodyH4Text[1].textContent = siteContent["main-content"]["about-h4"]
-bodyH4Text[2].textContent = siteContent["main-content"]["services-h4"]
-bodyH4Text[3].textContent = siteContent["main-content"]["product-h4"]
-bodyH4Text[4].textContent = siteContent["main-content"]["vision-h4"]
+H4Text[0].textContent = siteContent["main-content"]["features-h4"]
+H4Text[1].textContent = siteContent["main-content"]["about-h4"]
+H4Text[2].textContent = siteContent["main-content"]["services-h4"]
+H4Text[3].textContent = siteContent["main-content"]["product-h4"]
+H4Text[4].textContent = siteContent["main-content"]["vision-h4"]
 
-bodyPTags[0].textContent = siteContent["main-content"]["features-content"]
-bodyPTags[1].textContent = siteContent["main-content"]["about-content"]
-bodyPTags[2].textContent = siteContent["main-content"]["services-content"]
-bodyPTags[3].textContent = siteContent["main-content"]["product-content"]
-bodyPTags[4].textContent = siteContent["main-content"]["vision-content"]
+PTags[0].textContent = siteContent["main-content"]["features-content"]
+PTags[1].textContent = siteContent["main-content"]["about-content"]
+PTags[2].textContent = siteContent["main-content"]["services-content"]
+PTags[3].textContent = siteContent["main-content"]["product-content"]
+PTags[4].textContent = siteContent["main-content"]["vision-content"]
 
 //selecting the middle image
 const middleImage = document.querySelector(".middle-img")
 middleImage.setAttribute("src", siteContent["main-content"]["middle-img-src"])
+
+//adding in the contact header and text
+H4Text[5].textContent = siteContent["contact"]["contact-h4"]
+
+PTags[5].textContent = siteContent["contact"]["address"]
+PTags[6].textContent = siteContent["contact"]["phone"]
+PTags[7].textContent = siteContent["contact"]["email"]
