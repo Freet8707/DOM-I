@@ -61,3 +61,19 @@ headerButton.textContent = siteContent["cta"]["button"]
 //selecting header image
 const headerImage = document.getElementById("cta-img")
 headerImage.setAttribute('src', siteContent["cta"]["img-src"])
+
+//selecting all h4 and p tags
+const bodyH4Text = document.querySelectorAll("h4")
+const bodyPTags = document.querySelectorAll("p")
+
+bodyH4Text[0].textContent = siteContent["main-content"]["features-h4"]
+bodyH4Text[1].textContent = siteContent["main-content"]["about-h4"]
+bodyH4Text[2].textContent = siteContent["main-content"]["services-h4"]
+bodyH4Text[3].textContent = siteContent["main-content"]["product-h4"]
+bodyH4Text[4].textContent = siteContent["main-content"]["vision-h4"]
+
+bodyPTags[0].textContent = siteContent["main-content"]["features-content"]
+bodyPTags[1].textContent = siteContent["main-content"]["about-content"]
+bodyPTags[2].textContent = siteContent["main-content"]["services-content"]
+bodyPTags[3].textContent = siteContent["main-content"]["product-content"]
+bodyPTags[4].textContent = siteContent["main-content"]["vision-content"]
